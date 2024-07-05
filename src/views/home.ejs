@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Generator</title>
+</head>
+
+<body>
+    <h1>Hey from server</h1>
+    <% if (locals.id) { %>
+        <p>URL Generated: https://localhost:5000/<%= id %>
+        </p>
+        <% } %>
+            
+        <form method="post" action="/url/shorten">
+                <label for="">Enter Your URL</label>
+                <input type="text" name="url" placeholder="https://www.google.com">
+                <button>Submit</button>
+            </form>
+</body>
+
+</html>

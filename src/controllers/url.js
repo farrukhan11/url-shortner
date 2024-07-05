@@ -16,9 +16,9 @@ async function generateNewUrl(req, res) {
             redirectUrl: body.url,
             visitHistory: []
         });
-        return res.status(200).send({
+        return res.render("home", {
             message: 'URL shortened successfully',
-            shortID
+            id: shortID
         });
     } catch (error) {
         return res.status(500).send({
